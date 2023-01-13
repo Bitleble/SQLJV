@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a11fe2-c87c-4f45-b976-2997e231ae9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/h2_2_1_214.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL/demoConnect.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/h2-2.1.214.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Reps/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Reps/Paper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Tables/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/Tables/Paper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo/demoConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLJV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SQLJV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/demoConnect.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/Reps/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/Reps/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/Paper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/demoConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/demoConnect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +35,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="demo.demoConnect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo.demoConnect" />

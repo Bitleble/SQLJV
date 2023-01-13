@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import static java.lang.System.exit;
+
 public class demoConnect {
 
 
@@ -27,9 +29,10 @@ public class demoConnect {
     }
 
     // Создание всех таблиц и ключей между ними
-    public void createTablesAndForeignKeys() throws SQLException {
-        papers.createTable();
-    }
+    /*public void createTablesAndForeignKeys() throws SQLException {
+        //papers.createTable();
+        papers.createData();
+    }*/
 
 
 
@@ -37,7 +40,11 @@ public class demoConnect {
     public static void main(String[] args) {
         try{
             demoConnect stockExchangeDB = new demoConnect();
-            stockExchangeDB.createTablesAndForeignKeys();
+            stockExchangeDB.papers.createTable();
+            stockExchangeDB.papers.createData();
+            stockExchangeDB.papers.getData();
+            stockExchangeDB.papers.close();
+            exit(200);
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Ошибка SQL !");

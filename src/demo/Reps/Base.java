@@ -17,6 +17,14 @@ public class Base implements Closeable {
         this.connection = demoConnect.getConnection(); // Установим соединение с СУБД для дальнейшей работы
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
+
     // Закрытие
     public void close() {
         try {
@@ -38,7 +46,7 @@ public class Base implements Closeable {
     };
 
     void executeSqlStatement(String sql) throws SQLException {
-        executeSqlStatement(sql, null);
+        executeSqlStatement(sql, "Выполнено");
     };
 
 
@@ -48,4 +56,5 @@ public class Base implements Closeable {
             connection = demoConnect.getConnection();
         }
     }
+
 }
