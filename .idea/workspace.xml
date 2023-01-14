@@ -4,7 +4,6 @@
     <list default="true" id="77a11fe2-c87c-4f45-b976-2997e231ae9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL/demoConnect.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/Reps/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/Reps/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/Paper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/demoConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/demoConnect.java" afterDir="false" />

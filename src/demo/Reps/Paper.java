@@ -23,14 +23,13 @@ public class Paper extends Base implements createStuff {
                     """);
     }
 
+
+
     @Override
-    public void createData() throws SQLException {
-        super.executeSqlStatement("""
-                INSERT INTO ON_SELL (name, type, price, pages) VALUES ('Угол Шара', 'BOOK', 224, 154)
-                """);
-        super.executeSqlStatement("""
-                INSERT INTO ON_SELL (name, type, price, pages) VALUES ('SQUARE2', 'Газета', 2243, 1544)
-                """);
+    public void createData(String nameIn, String typeIn, int priceIn, int pagesIn) throws SQLException {
+        super.executeSqlStatement(String.format("""
+                INSERT INTO ON_SELL (name, type, price, pages) VALUES ('%s', '%s', %s, %s)
+                """,nameIn, typeIn, priceIn, pagesIn));
     }
 
     @Override
@@ -40,7 +39,15 @@ public class Paper extends Base implements createStuff {
         ResultSet resultSet = stat.executeQuery("SELECT * FROM ON_SELL");
         while(resultSet.next()) {
             String name = resultSet.getString("name");
-            System.out.println("Наименование : "+name);
+            System.out.println("Наименование : "+ name +"| id: " +resultSet.getString("id"));
         }
+    }
+
+    @Override
+    public void deleteID(int idDel) throws SQLException {
+        Connection connectionT = super.getConnection();
+        Statement stat = connectionT.createStatement();
+        stat.executeUpdate("DELETE FROM ON_SELL WHERE id = "+ idDel);
+        System.out.println("Удалена запись с ID - "+ idDel);
     }
 }
