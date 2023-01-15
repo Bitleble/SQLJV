@@ -8,5 +8,7 @@ import java.sql.SQLException;
         void createData(String nameIn, String typeIn, int priceIn, int pagesIn) throws SQLException;
         void getData() throws SQLException;
         void deleteID(int ifDel) throws SQLException;
+        void soldID(int ifSell) throws SQLException;
+        void changeID(int id) throws SQLException;
     }
 

@@ -10,7 +10,6 @@ import static java.lang.System.exit;
 
 public class demoConnect {
 
-
     public static final String DB_URL = "jdbc:h2:./SQL/demoConnect";
     public static final String DB_Driver = "org.h2.Driver";
 
@@ -38,16 +37,17 @@ public class demoConnect {
 
 
     public static void main(String[] args) {
+
         try{
             demoConnect stockExchangeDB = new demoConnect();
-            /*stockExchangeDB.papers.createTable(); // убрать комментарий, если нужно создать новую базу данных с таблицей */
-            stockExchangeDB.papers.createData("Первая запись", "Газета",10,2);
+            stockExchangeDB.papers.createTable(); // убрать комментарий, если нужно создать новую базу данных с таблицей */
+            stockExchangeDB.papers.createData("Первая запись", "Газета",170,2);
             stockExchangeDB.papers.createData("Вторая", "Книга",1045,22);
             stockExchangeDB.papers.createData("Третья", "Газета",10,2);
             stockExchangeDB.papers.createData("Первая запись", "Газета",10,2);
             stockExchangeDB.papers.createData("------------------", "Книга",101,2);
-            stockExchangeDB.papers.getData();
-            stockExchangeDB.papers.deleteID(10);
+            stockExchangeDB.papers.soldID(1);
+            stockExchangeDB.papers.soldID(2);
             stockExchangeDB.papers.getData();
             stockExchangeDB.papers.close();
             exit(200);
@@ -58,7 +58,4 @@ public class demoConnect {
             throw new RuntimeException(e);
         }
     }
-
-
-
 }
