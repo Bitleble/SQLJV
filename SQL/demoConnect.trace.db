@@ -1,0 +1,4 @@
+2023-01-16 02:15:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ON_SELL" not found (this database is empty); SQL statement:
+INSERT INTO ON_SELL (name, type, price, pages) VALUES ('Первая запись', 'Газета', 170, 2)
+ [42104-214]

@@ -46,7 +46,7 @@ public class Base implements Closeable {
     };
 
     void executeSqlStatement(String sql) throws SQLException {
-        executeSqlStatement(sql, "Выполнено");
+        executeSqlStatement(sql, "SQL инъекция");
     };
 
 

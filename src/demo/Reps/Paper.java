@@ -44,22 +44,23 @@ public class Paper extends Base implements createStuff {
     }
 
     @Override
-    public void deleteID(int idDel) throws SQLException {
+    public void deleteName(String ifDel) throws SQLException {
         Connection connectionT = super.getConnection();
         Statement stat = connectionT.createStatement();
-        stat.executeUpdate("DELETE FROM ON_SELL WHERE id = "+ idDel);
-        System.out.println("Удалена запись с ID - "+ idDel);
+        stat.executeUpdate(
+                String.format("DELETE FROM ON_SELL WHERE name = '%s' LIMIT 1", ifDel));
+        //System.out.println("Удалена запись - "+ ifDel);
     }
 
     @Override
-    public void soldID(int ifSell) throws SQLException {
+    public void soldID(String ifSell) throws SQLException {
         Connection connectionT = super.getConnection();
         Statement stat = connectionT.createStatement();
-        ResultSet resultSet = stat.executeQuery("SELECT * FROM ON_SELL WHERE id = "+ifSell);
-        while(resultSet.next()) {
-            System.out.println("Продан товар с ID - "+ ifSell + "| стоимостью - "+ resultSet.getString("price"));
-            deleteID(ifSell);
-        }
+        ResultSet resultSet = stat.executeQuery(String.format("SELECT * FROM ON_SELL WHERE name = '%s' LIMIT 1",ifSell));
+        while(resultSet.next())
+            System.out.println("Продан товар - "+ ifSell + " | стоимостью - "+ resultSet.getString("price"));
+
+        deleteName(ifSell);
     }
 
     @Override

@@ -40,14 +40,15 @@ public class demoConnect {
 
         try{
             demoConnect stockExchangeDB = new demoConnect();
-            stockExchangeDB.papers.createTable(); // убрать комментарий, если нужно создать новую базу данных с таблицей */
+            //stockExchangeDB.papers.createTable(); // убрать комментарий, если нужно создать новую базу данных с таблицей */
             stockExchangeDB.papers.createData("Первая запись", "Газета",170,2);
             stockExchangeDB.papers.createData("Вторая", "Книга",1045,22);
             stockExchangeDB.papers.createData("Третья", "Газета",10,2);
             stockExchangeDB.papers.createData("Первая запись", "Газета",10,2);
             stockExchangeDB.papers.createData("------------------", "Книга",101,2);
-            stockExchangeDB.papers.soldID(1);
-            stockExchangeDB.papers.soldID(2);
+            stockExchangeDB.papers.getData();
+            stockExchangeDB.papers.soldID("Вторая");
+            stockExchangeDB.papers.soldID("Третья");
             stockExchangeDB.papers.getData();
             stockExchangeDB.papers.close();
             exit(200);
