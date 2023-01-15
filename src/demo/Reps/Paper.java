@@ -39,7 +39,7 @@ public class Paper extends Base implements createStuff {
         ResultSet resultSet = stat.executeQuery("SELECT * FROM ON_SELL");
         while(resultSet.next()) {
             String name = resultSet.getString("name");
-            System.out.println("Наименование : "+ name +"| id: " +resultSet.getString("id"));
+            System.out.println("Наименование : "+ name +" | Цена : "+resultSet.getString("price")+"\nid: " +resultSet.getString("id"));
         }
     }
 
@@ -64,9 +64,10 @@ public class Paper extends Base implements createStuff {
     }
 
     @Override
-    public void changeID(int id) throws SQLException {
+    public void changeID(int id, String chName, String chType, int chPrice, int chPages) throws SQLException {
         Connection connectionT = super.getConnection();
         Statement stat = connectionT.createStatement();
-        stat.executeUpdate("");
+        // в идеале открывать отдельное окошко и изменять что тебе нужно, но пока пропишу полное разовое изменение
+        stat.executeUpdate(String.format("UPDATE ON_SELL SET name = '%s', type = '%s', price = %s, pages = %s WHERE id = %s",chName,chType,chPrice,chPages,id));
     }
 }

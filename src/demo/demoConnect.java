@@ -46,9 +46,11 @@ public class demoConnect {
             stockExchangeDB.papers.createData("Третья", "Газета",10,2);
             stockExchangeDB.papers.createData("Первая запись", "Газета",10,2);
             stockExchangeDB.papers.createData("------------------", "Книга",101,2);
-            stockExchangeDB.papers.getData();
-            stockExchangeDB.papers.soldID("Вторая");
-            stockExchangeDB.papers.soldID("Третья");
+            //stockExchangeDB.papers.getData();
+            //stockExchangeDB.papers.soldID("Вторая");
+            //stockExchangeDB.papers.soldID("Третья");
+            //stockExchangeDB.papers.getData();
+            stockExchangeDB.papers.changeID(9,"Новое имя", "Новый тип", 324, 243);
             stockExchangeDB.papers.getData();
             stockExchangeDB.papers.close();
             exit(200);

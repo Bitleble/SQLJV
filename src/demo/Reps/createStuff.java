@@ -9,6 +9,6 @@ import java.sql.SQLException;
         void getData() throws SQLException;
         void deleteName(String ifDel) throws SQLException;
         void soldID(String ifDel) throws SQLException;
-        void changeID(int id) throws SQLException;
+        void changeID(int id, String foo, String fooS, int fooI, int fooIS) throws SQLException;
     }
 

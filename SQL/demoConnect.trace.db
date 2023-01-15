@@ -2,3 +2,7 @@
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ON_SELL" not found (this database is empty); SQL statement:
 INSERT INTO ON_SELL (name, type, price, pages) VALUES ('Первая запись', 'Газета', 170, 2)
  [42104-214]
+2023-01-16 02:39:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE ON_SELL SET name = 'Новое имя' [*]type = 'Новый тип' price = 324 pages = 243 WHERE id = 1"
+Syntax error in SQL statement "UPDATE ON_SELL SET name = 'Новое имя' [*]type = 'Новый тип' price = 324 pages = 243 WHERE id = 1"; SQL statement:
+UPDATE ON_SELL SET name = 'Новое имя' type = 'Новый тип' price = 324 pages = 243 WHERE id = 1 [42000-214]
