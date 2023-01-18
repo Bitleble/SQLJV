@@ -58,14 +58,15 @@ public class Paper extends Base implements createStuff {
     }
 
     @Override
-    public void soldID(String ifSell) throws SQLException {
+    public String soldID(String ifSell) throws SQLException {
         Connection connectionT = super.getConnection();
         Statement stat = connectionT.createStatement();
         ResultSet resultSet = stat.executeQuery(String.format("SELECT * FROM ON_SELL WHERE name = '%s' LIMIT 1",ifSell));
+        String info = null;
         while(resultSet.next())
-            System.out.println("Продан товар - "+ ifSell + " | стоимостью - "+ resultSet.getString("price"));
-
+            info = ("Продан товар: "+ ifSell + "\n стоимостью: "+ resultSet.getString("price"));
         deleteName(ifSell);
+        return info;
     }
 
     @Override

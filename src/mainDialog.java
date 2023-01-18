@@ -35,6 +35,18 @@ public class mainDialog extends JDialog {
             }
         });
 
+        idChange.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onChange(stockExchangeDB);
+            }
+        });
+
+        delData.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onDelete(stockExchangeDB);
+            }
+        });
+
 
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -63,6 +75,24 @@ public class mainDialog extends JDialog {
         newDataPanel j = new newDataPanel(stockExchangeDB);
         try {
             j.doThing(stockExchangeDB);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void onChange(demoConnect stockExchangeDB) {
+        changeDataPanel jC = new changeDataPanel(stockExchangeDB);
+        try {
+            jC.doThingChange(stockExchangeDB);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void onDelete(demoConnect stockExchangeDB) {
+        delDataPanel jD = new delDataPanel(stockExchangeDB);
+        try {
+            jD.doThingDelete(stockExchangeDB);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
