@@ -1,9 +1,12 @@
 package demo.Reps;
 
+import java.awt.*;
+import java.lang.reflect.Array;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class Paper extends Base implements createStuff {
 
@@ -33,14 +36,16 @@ public class Paper extends Base implements createStuff {
     }
 
     @Override
-    public void getData() throws SQLException {
+    public ArrayList<String> getData() throws SQLException {
         Connection connectionT = super.getConnection();
         Statement stat = connectionT.createStatement();
         ResultSet resultSet = stat.executeQuery("SELECT * FROM ON_SELL");
+        ArrayList<String> forShow = new ArrayList<>();
         while(resultSet.next()) {
             String name = resultSet.getString("name");
-            System.out.println("Наименование : "+ name +" | Цена : "+resultSet.getString("price")+"\nid: " +resultSet.getString("id"));
+            forShow.add("Наименование : "+ name +" | Цена : "+resultSet.getString("price")+" | id: " +resultSet.getString("id")+"\n");
         }
+        return forShow;
     }
 
     @Override

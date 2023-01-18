@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a11fe2-c87c-4f45-b976-2997e231ae9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/mainDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newDataPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newDataPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL/demoConnect.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/demoConnect.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/demoConnect.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/demoConnect.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/Reps/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/Paper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Reps/createStuff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/demoConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/demoConnect.java" afterDir="false" />
@@ -43,7 +46,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.demo.demoConnect">
+  <component name="RunManager" selected="Application.mainDialog">
     <configuration name="demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo" />
       <module name="SQLJV" />
@@ -77,8 +80,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="mainDialog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainDialog" />
+      <module name="SQLJV" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.mainDialog" />
         <item itemvalue="Application.demo.demoConnect" />
         <item itemvalue="Application.demoDialog" />
         <item itemvalue="Application.demo" />

@@ -18,7 +18,7 @@ public class demoConnect {
         return DriverManager.getConnection(DB_URL);
     }
 
-    Paper papers;
+    public Paper papers;
 
 
     public demoConnect() throws SQLException, ClassNotFoundException {
@@ -40,7 +40,7 @@ public class demoConnect {
 
         try{
             demoConnect stockExchangeDB = new demoConnect();
-            //stockExchangeDB.papers.createTable(); // убрать комментарий, если нужно создать новую базу данных с таблицей */
+            /*stockExchangeDB.papers.createTable(); // убрать комментарий, если нужно создать новую базу данных с таблицей
             stockExchangeDB.papers.createData("Первая запись", "Газета",170,2);
             stockExchangeDB.papers.createData("Вторая", "Книга",1045,22);
             stockExchangeDB.papers.createData("Третья", "Газета",10,2);
@@ -53,7 +53,7 @@ public class demoConnect {
             stockExchangeDB.papers.changeID(9,"Новое имя", "Новый тип", 324, 243);
             stockExchangeDB.papers.getData();
             stockExchangeDB.papers.close();
-            exit(200);
+            exit(200);*/
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Ошибка SQL !");
